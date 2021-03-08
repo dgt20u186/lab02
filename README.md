@@ -77,43 +77,54 @@
    
 7. Закоммитьте новую версию программы. Почему не надо добавлять файл повторно ```git add```?
 
-   Команда: ```$ git commit -m"hello_world.cpp is updated."```
+   Команда: ```$ git commit -a -m"added hello_world.cpp."```
 
    Вывод:
    ```
-   На ветке master
-
-   Начальный коммит
-
-   Неотслеживаемые файлы:
-     (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
-   	   .bash_history
-   	   .bash_logout
-	   .bashrc
-	   .cache/
-	   .config/
-	   .gem/
-	   .gist
-	   .gitconfig
-	   .local/
-	   .mozilla/
-	   .pki/
-	   .profile
-	   .sudo_as_admin_successful
-	   .viminfo
-	   .vscode/
-	   .wget-hsts
-	   boost_1_69_0.tar.gz.1
-	   boost_1_69_0/
-	   dgt20u186/
-	   hello_world.cpp
-	   include
-	   snap/
-	   token/
-	   workspace/
-	   "\320\227\320\260\320\263\321\200\321\203\320\267\320\272\320\270/"
-	   "\320\230\320\267\320\276\320\261\321\200\320\260\320\266\320\265\320\275\320\270\321\217/"
-
-   ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+   [master edb4a61] added hello_world.cpp.
+   1 file changed, 7 insertions(+), 2 deletions(-)
    ```
 
+8. Запуште изменения в удалёный репозиторий.
+
+   Команда: ```$ git push origin master```
+   
+   Вывод:
+   ```
+   Username for 'https://github.com': dgt20u186
+   Password for 'https://dgt20u186@github.com': 
+   remote: Repository not found.
+   fatal: repository 'https://github.com//lab02.git/' not found
+   ```
+   
+9. Проверьте, что история коммитов доступна в удалёный репозитории.
+
+   Команда: ```$ git log```
+   
+   Вывод:
+   ```
+   commit edb4a61faaf3d1a3fc2a87c942d4ec96edd24f1b (HEAD -> master)
+   Author: dgt20u186 <dalgatovgitinomd@gmail.com>
+   Date:   Mon Mar 8 12:17:56 2021 +0300
+
+       added hello_world.cpp.
+
+   commit 16155c555ed8fdad102e68d15e36007d101de146
+   Author: dgt20u186 <dalgatovgitinomd@gmail.com>
+   Date:   Mon Mar 8 12:13:22 2021 +0300
+
+       added hello_world.cpp
+   ```
+
+
+### Part 2
+1. В локальной копии репозитория создайте локальную ветку ```patch1```.
+
+   Команда: ```$ git checkout -b patch1```
+   
+   Вывод: ```Переключено на новую ветку «patch1»```
+   
+2. Внесите изменения в ветке ```patch1``` по исправлению кода и избавления от ```using namespace std;```.
+
+   Команда: 
+   
