@@ -126,5 +126,57 @@
    
 2. Внесите изменения в ветке ```patch1``` по исправлению кода и избавления от ```using namespace std;```.
 
-   Команда: 
+   Команда: ```$ git commit -m"delete 'using namespace std;'."```
    
+   Вывод(фрагмент):
+   ```
+   На ветке patch1
+   Изменения, которые не в индексе для коммита:
+     (используйте «git add/rm <файл>…», чтобы добавить или удалить файл из индекса)
+     (use "git restore <file>..." to discard changes in working directory)
+     (сделайте коммит или отмените изменения в неотслеживаемом или измененном содержимом в подмодулях)
+	   изменено:      .bash_history
+	   изменено:      .cache/mozilla/firefox/q9deefwq.default-release/cache2/entries/F98EB666F6B6A248B0B2E4914F8DC096FCAC8B94
+	   изменено:      .cache/mozilla/firefox/q9deefwq.default-release/safebrowsing/google4/goog-badbinurl-proto.metadata
+	   изменено:      .cache/mozilla/firefox/q9deefwq.default-release/safebrowsing/google4/goog-badbinurl-proto.vlpset
+   ```
+   
+3. **commit**, **push** локальную ветку в удалённый репозиторий.
+
+   Команда 1: ```$ git commit -m "Commit of branch."```
+   
+   Вывод(фрагмент):
+   ```
+   На ветке patch1
+   Изменения, которые не в индексе для коммита:
+     (используйте «git add/rm <файл>…», чтобы добавить или удалить файл из индекса)
+     (use "git restore <file>..." to discard changes in working directory)
+     (сделайте коммит или отмените изменения в неотслеживаемом или измененном содержимом в подмодулях)
+   	изменено:      .bash_history
+   	изменено:      .cache/mozilla/firefox/q9deefwq.default-release/cache2/entries/02EDB6AB71B49C0B0F6FE10B397CCF59B66D1B9E
+   ```
+   
+   Команда 2: ```$ git checkout master.```
+   
+   Вывод(фрагмент):
+   ```
+   error: Ваши локальные изменения в указанных файлах будут перезаписаны при переключении на состояние:
+	.bash_history
+	.cache/mozilla/firefox/q9deefwq.default-release/cache2/entries/02EDB6AB71B49C0B0F6FE10B397CCF59B66D1B9E
+	.cache/mozilla/firefox/q9deefwq.default-release/cache2/entries/09008055BF907CD3ACEA12412C83DD1A07D70976
+	.cache/mozilla/firefox/q9deefwq.default-release/cache2/entries/09F7569B5528F1E701896973106E364BED786A5C
+	.cache/mozilla/firefox/q9deefwq.default-release/cache2/entries/0ACA9C8486815ABAF991748A4990CB0448F4C3B6
+	.cache/mozilla/firefox/q9deefwq.default-release/cache2/entries/0B78C8E599409E217F1D501D0BDE15213FF3F0BB
+	.cache/mozilla/firefox/q9deefwq.default-release/cache2/entries/0DDCED7BD9D8235DE0A1FCCF69235CE8F84669D3
+	.cache/mozilla/firefox/q9deefwq.default-release/cache2/entries/1241A9551D328553E43831E9D9C55B87DD2AE103
+   ```
+      
+4. Проверьте, что ветка ```patch1``` доступна в удалёный репозитории.
+
+   Команда: ```$ git remote```
+
+   Вывод: ```origin```
+   
+5. Создайте ```pull-request patch1 -> master```.
+
+   Команда:
