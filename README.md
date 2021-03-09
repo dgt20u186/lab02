@@ -179,4 +179,4 @@
    
 5. Создайте ```pull-request patch1 -> master```.
 
-   Команда:
+   --
