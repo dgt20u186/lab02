@@ -77,12 +77,12 @@
    
 7. Закоммитьте новую версию программы. Почему не надо добавлять файл повторно ```git add```?
 
-   Команда: ```$ git commit -a -m"added hello_world.cpp."```
+   Команда: ```$ git commit -m"upgraded hello_world.cpp" -a```
 
-   Вывод:
+   Вывод(фрагмент):
    ```
-   [master edb4a61] added hello_world.cpp.
-   1 file changed, 7 insertions(+), 2 deletions(-)
+   [patch2 6e512bf8b] upgraded hello_world.cpp
+   33 files changed, 5 insertions(+), 5 deletions(-)
    ```
 
 8. Запуште изменения в удалёный репозиторий.
@@ -126,8 +126,18 @@
    
 2. Внесите изменения в ветке ```patch1``` по исправлению кода и избавления от ```using namespace std;```.
 
-   Команда: ```$ git commit -m"delete 'using namespace std;'."```
-   
+   Команда 1: ```$ git commit -m"delete 'using namespace std;'."```
+   Код:
+   ```
+   #include <iostream>
+    
+   int main ()
+   {
+   	std::string str;       
+	std::cin >> str;
+	std::cout << "Hello world from " << str << "\n";
+   }
+   ```
    Вывод(фрагмент):
    ```
    На ветке patch1
