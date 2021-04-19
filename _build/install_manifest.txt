@@ -1,0 +1,4 @@
+/home/dgt20u186/dgt20u186/workspace/_install/lib/libprint.a
+/home/dgt20u186/dgt20u186/workspace/_install/include/print.hpp
+/home/dgt20u186/dgt20u186/workspace/_install/cmake/print-config.cmake
+/home/dgt20u186/dgt20u186/workspace/_install/cmake/print-config-noconfig.cmake
